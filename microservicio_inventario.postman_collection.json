@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "9f378c63-fb05-425e-872d-695c2554e6c8",
+		"name": "microservicio_inventario",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19739568",
+		"_collection_link": "https://gold-capsule-403283.postman.co/workspace/SGV-Workspace~7b1eeeb7-4d81-4f9d-89d9-e2e22bc16fdb/collection/19739568-9f378c63-fb05-425e-872d-695c2554e6c8?action=share&creator=19739568&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "read_producto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/inventario/productos",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"inventario",
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sku\" : 1,\r\n    \"descripcion\" : \"Bebida Pepsi Light 350ml\",\r\n    \"referencia\" : \"p350\",\r\n    \"peso\" : 350,\r\n    \"unidad_empaque\" : 1\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/inventario/productos",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"inventario",
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_producto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"id\" : 1,\r\n    \"sku\" : 1,\r\n    \"descripcion\" : \"Bebida Pepsi Light 350ml\",\r\n    \"referencia\" : \"p350\",\r\n    \"peso\" : 350,\r\n    \"unidad_empaque\" : 1,\r\n    \"estado\" : true\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/inventario/productos",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"inventario",
+						"productos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
