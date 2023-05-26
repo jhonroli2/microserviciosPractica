@@ -1,19 +1,24 @@
 {
 	"info": {
-		"_postman_id": "9f378c63-fb05-425e-872d-695c2554e6c8",
+		"_postman_id": "ee37b361-c46e-4c9d-a231-5cf883e417f2",
 		"name": "microservicio_inventario",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "19739568",
-		"_collection_link": "https://gold-capsule-403283.postman.co/workspace/SGV-Workspace~7b1eeeb7-4d81-4f9d-89d9-e2e22bc16fdb/collection/19739568-9f378c63-fb05-425e-872d-695c2554e6c8?action=share&creator=19739568&source=collection_link"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "read_producto",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/inventario/productos",
+					"raw": "http://127.0.0.1:8000/inventario/productos?id=1",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -25,6 +30,12 @@
 					"path": [
 						"inventario",
 						"productos"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
 					]
 				}
 			},
@@ -37,7 +48,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"sku\" : 1,\r\n    \"descripcion\" : \"Bebida Pepsi Light 350ml\",\r\n    \"referencia\" : \"p350\",\r\n    \"peso\" : 350,\r\n    \"unidad_empaque\" : 1\r\n\r\n}",
+					"raw": "{\r\n    \"sku\" : 1,\r\n    \"descripcion\" : \"Bebida Pepsi Light 350ml\",\r\n    \"referencia\" : \"p350\",\r\n    \"peso\" : 350,\r\n    \"unidad_empaque\" : 1,\r\n    \"proveedor\" : \"Vendedor 1\"\r\n\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
