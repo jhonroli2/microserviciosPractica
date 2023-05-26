@@ -13,7 +13,7 @@ class productos(models.Model):
     precio = models.DecimalField(max_digits=16, decimal_places=4, blank=True, null=True)
     unidad_empaque = models.DecimalField(max_digits=16, decimal_places=4, blank=False, null=False)
     proveedor = models.CharField(max_length=300, blank=False, null=False)
-    estado = models.BinaryField(default=1)
+    estado = models.IntegerField(default=1, blank=True, null=True)
 
 class inventario(models.Model):
     id  = models.AutoField(primary_key=True)
